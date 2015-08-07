@@ -24,6 +24,17 @@ jQuery(function($){
 	_landing();
 	_infiniteScroll();
 	_accordions();
+
+	$('#promo-slider').cycle({
+		speed: 200,
+		timeout: 10000,
+		manualSpeed: 200,
+		slides: '> .promo',
+		pager: '.promo-pager',
+		pagerTemplate: '<span></span>'
+
+	}).cycle('pause');
+
 });
 
 function _biomore(){
@@ -38,10 +49,31 @@ function _biomore(){
 }
 
 function _languageBox(){
-	$('.language-toggle').click( function(){
+
+	$('#languageToggle').on('click', function(){
 		$(this).parent().toggleClass('open');
-		$('.languages-box-wrap ul').slideToggle('fast');
+		$(this).siblings('ul').slideToggle('fast');
 	});
+
+	$('#mircoDesktop').on('click', function(){
+		$(this).parent().toggleClass('open');
+		$(this).siblings('ul').slideToggle('fast');
+	});
+
+	$('#languageMobToggle').on('click', function(){
+		$(this).parent().toggleClass('open');
+		$(this).siblings('ul').slideToggle('fast');
+	});
+
+	$('#microMobToggle').on('click', function(){
+		$(this).parent().toggleClass('open');
+		$(this).siblings('ul').slideToggle('fast');
+	});
+
+	// $('.language-toggle').click( function(){
+	// 	$(this).parent().toggleClass('open');
+	// 	$('.languages-box-wrap > ul').slideToggle('fast');
+	// });
 }
 
 function _searchToggle(){

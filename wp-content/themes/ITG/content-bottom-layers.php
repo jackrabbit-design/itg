@@ -113,6 +113,32 @@
                             </div>
                         </div>
                     </section>
-    
+        <?php 
+        elseif(get_row_layout() == "recent_blog_posts"):
+    ?> 
+                    <section id="pg-updates">
+                    	<div class="container">
+                        	<div class="container-inner clearfix">
+                            	<div class="col-one pull-left">
+                                	<h2 class="lrg-head-line">FROM <br/>THE BLOG</h2>
+                                </div>
+                                <?php if($posts = get_sub_field('blog_posts')):  ?>
+                                <div class="col-two pull-right">
+                                	<ul>
+                                		<?php foreach($posts as $post) { 
+                                			setup_postdata($post);
+                                		?>
+                                        <li>
+                                            <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+                                            <span class="news-date"><?php the_date('F j, Y'); ?></span>
+                                            <?php //<a class="cat" href="#">News</a> ?>
+                                        </li>
+                                       <?php } ?>
+                                    </ul>
+                                </div>
+                            <?php wp_reset_postdata(); endif; ?>
+                            </div>
+                        </div>
+                    </section>
     
     <?php   endif; endwhile; ?>

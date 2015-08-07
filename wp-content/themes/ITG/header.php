@@ -36,10 +36,13 @@
                 	<div class="inner-wrap clearfix">
                     	
                     	<div class="languages-box-wrap pull-right">
-                            <span id="languageToggle" class="language-toggle">Languages <i class="theme-arrow-head-down"></i></span>
+                            <span id="languageToggle">Languages <i class="theme-arrow-head-down"></i></span>
                                 <?php wp_nav_menu( array('theme_location' => 'language-menu', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'depth' => 1 )); ?>
                         </div> <!--languages-box-wrap-->
-                        
+                        <div class="languages-box-wrap pull-right mircro-desk">
+                            <span id="mircoDesktop">Knowledge Centers<i class="theme-arrow-head-down"></i></span>
+                                <?php wp_nav_menu( array('theme_location' => 'microsite-menu', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'depth' => 1 )); ?>
+                        </div> <!--languages-box-wrap-->
                         <div class="top-nav-wrap pull-right">
                             <div class="clearfix">
                                 <div class="top-nav pull-left">
@@ -90,19 +93,24 @@
                 <div class="mobile" id="mobile_menu">
                 	<div class="inner-wrap">
                     	<div class="languages-box-wrap">
-                           <span id="languageToggle" class="language-toggle">Languages <i class="theme-arrow-head-down"></i></span>
+                           <span id="languageMobToggle" class="language-toggle">Languages <i class="theme-arrow-head-down"></i></span>
                                 <?php wp_nav_menu( array('theme_location' => 'language-menu', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'depth' => 1 )); ?>
-                        </div> <!--languages-box-wrap-->
+                       		</div> <!--languages-box-wrap-->
 
+                       		
+						
                         
                         
                         <nav id="mobilenav">
                             <?php wp_nav_menu( array('theme_location' => 'main-menu', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'depth' => 2 )); ?>
                         </nav>
-                        
-                        <div class="visual-insight">
-                        	<?php wp_nav_menu( array('theme_location' => 'microsite-menu', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'depth' => 1 )); ?>
-                        </div><!--visual-insight-->
+                        <div class="languages-box-wrap micro">
+                           <span id="microMobToggle" class="language-toggle">Knowledge Centers<i class="theme-arrow-head-down"></i></span>
+                                <?php wp_nav_menu( array('theme_location' => 'microsite-menu', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'depth' => 1 )); ?>
+                       		</div> <!--languages-box-wrap-->
+                      <!--  <div class="visual-insight">-->
+                        	<?php //wp_nav_menu( array('theme_location' => 'microsite-menu', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'depth' => 1 )); ?>
+                      <!--   </div>visual-insight-->
                         
                         <div class="top-nav">
                             <?php wp_nav_menu( array('theme_location' => 'utility-menu', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'depth' => 1 )); ?>

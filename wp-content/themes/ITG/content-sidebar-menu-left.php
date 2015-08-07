@@ -35,18 +35,23 @@
                     </div>
                     
                     <?php if(get_field('promo_banners')): ?>
-                    <div class="left-box pull-left promos">
+                    <div class="left-box pull-left promos ">
+                    	<div id="promo-slider" >
                         <?php while(has_sub_field('promo_banners')): ?>
                         <div class="promo">
-                            <?php $img = get_field('promo_image'); ?>
+                            <?php $img = get_sub_field('promo_image'); ?>
                         	<div class="top-image" style="background-image:url(<?php if(isset($img['sizes']['promo'])){ echo $img['sizes']['promo']; }?>)"></div>
                             <div class="wrapper">
                             	<h4><?php the_sub_field('promo_headline'); ?></h4>
                                 <p><?php the_sub_field('promo_description'); ?></p>
-                                <?php if(get_field('promo_link') != ''): ?><a href="<?php the_sub_field('promo_link'); ?>" class="read-more bold uppercase">LEARN more <span>&#62;</span></a><?php endif; ?>
+                                <?php if(get_sub_field('promo_link') != ''): ?><a href="<?php the_sub_field('promo_link'); ?>" class="read-more bold uppercase">LEARN more <!-- <span>&#62;</span> --></a><?php endif; ?>
                             </div>
                         </div>
                         <?php endwhile; ?>
+
                     </div>
+                    
+                	</div>
+                	<div class="promo-pager"></div>
                     <?php endif; ?>
                 </aside>
