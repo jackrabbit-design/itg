@@ -75,12 +75,12 @@
                                     <?php wp_nav_menu( array('theme_location' => 'main-menu', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'depth' => 2 )); ?>
                                 </nav>
                             
-                                <div class="visual-insight pull-right">
+                                <?php /* <div class="visual-insight pull-right">
                                     <div class="inner-wrap">
                                         <span id="visualIcon"></span>
                                         <?php wp_nav_menu( array('theme_location' => 'microsite-menu', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'depth' => 1 )); ?>
                                     </div>
-                                </div>
+                                </div> */ ?>
                             </div>
                         </div><!-- main nav wrap -->                        
                     </div>
@@ -90,9 +90,11 @@
                 <div class="mobile" id="mobile_menu">
                 	<div class="inner-wrap">
                     	<div class="languages-box-wrap">
-                            <span id="languageToggle" class="language-toggle">Languages <i class="theme-arrow-head-down"></i></span>
+                           <span id="languageToggle" class="language-toggle">Languages <i class="theme-arrow-head-down"></i></span>
                                 <?php wp_nav_menu( array('theme_location' => 'language-menu', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'depth' => 1 )); ?>
                         </div> <!--languages-box-wrap-->
+
+                        
                         
                         <nav id="mobilenav">
                             <?php wp_nav_menu( array('theme_location' => 'main-menu', 'container' => '', 'menu_class' => '', 'menu_id' => '', 'depth' => 2 )); ?>
